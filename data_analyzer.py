@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 df = pd.read_csv("student.csv")
 
@@ -12,3 +13,9 @@ top_students = df[df["Marks"] > 85]
 
 print("\nTop Students:")
 print(top_students)
+
+plt.bar(df["Name"], df["Marks"])
+plt.title("Student Marks")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.show()
